@@ -1,5 +1,6 @@
 package org.generatio.blogpessoal.repository;
 
+@Repository
 import java.util.Optional;
 
 import org.generatio.blogpessoal.model.Usuario;
