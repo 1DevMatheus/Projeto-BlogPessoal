@@ -17,9 +17,12 @@ import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+
 @Entity
 @Table(name = "tb_usuarios")
 public class Usuario {
+	
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,7 +31,8 @@ public class Usuario {
 	@NotNull(message = "Insira seu nome!")
 	private String nome;
 
-	@NotNull(message = "Insira seu email!")
+	@Schema(example = "email@email.com")
+	@NotNull(message = "O atibuto e-mail é obrigatorio")
 	@Email(message = "Insira um email valido!")
 	private String usuario;
 
